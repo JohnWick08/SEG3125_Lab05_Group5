@@ -13,68 +13,122 @@
 
 <body>
 
-    <!-- Tab links, each one with an onclick event associated with it -->
-    <div class = "ss">
-        <img class = "logo"src="img/logo.png"style="opacity: 0.7">
+<nav class="navbar navbar-expand-md bg-info navbar-dark">
+    <img class = "logo"src="img/logo.png"style="opacity: 0.7">
+    <a class="navbar-brand" href="#">GVK's Bicycle Repair Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#services"><img class = "icon" src="img/customer.png">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#employees"><img class = "icon" src="img/recruitment.png">Employees</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#bookService"> <img class = "icon" src="img/note.png">BookService</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contactUs"><img class = "icon" src="img/contact.png">Contact us</a>
+            </li>
 
-        <div class="tab">
-            <button class="tablinks" onclick="openInfo(event, 'contactUs')">
-                <p>Contact Us</p>
-                <img class = "icon" src="img/contact.png"></img>
-            </button>
-            <button class="tablinks" onclick="openInfo(event, 'employees')">
-                <p>Employees</p>
-                <img class = "icon" src="img/recruitment.png"></img>
-            </button>
-            <button class="tablinks" onclick="openInfo(event, 'bookService')">
-                <p>Book a Service</p>
-                <img class = "icon" src="img/note.png"></img>
-            </button>
-            <button class="tablinks" onclick="openInfo(event, 'services')">
-                <p>Services</p>
-                <img class = "icon" src="img/customer.png"></img>
-            </button>
-            <button class="tablinks" style="color: cornflowerblue; font-family: sans-serif" onclick="openInfo(event, 'services')">GVK's Bicycle Repair Store</button>
-        </div>
+        </ul>
     </div>
+</nav>
+<br>
+
 
     <!-- Tab content -->
-    <div id="services" class="tabcontent">
-        <h1>Here are the Services</h1>
+    <div id="services" class="container">
+        <div class="sa"><img class = "inline-icon" src="img/customer.png"><h1>Here are the Services</h1></div>
         <div class="container">
             <div class="d-inline-flex p-1 bg-secondary text-black w-100" style = "height: 500px">
                 <div class="p-1 m-1 bg-info w-25 text-center">
                     <p class="h4">Bike Repairing</p>
                     <img class="w-100 h-50" src="img/repair.jpg">
-                    <p class="h6 font-italic">"Give us a broken bike, we will return you a good one."         </p>
-                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                    <p class="h5 ">"Give us a broken bike, we will return you a good one."         </p>
+                    <button class="bg-primary text-white w-40" style="font-size: 70%" onclick="openInfo(event, 'bookService')">Book</button>
                 </div>
                 <div class="p-1 m-1 bg-info w-25 text-center">
                     <p class="h4">Bike Tire Pumping</p>
                     <img class="w-100 h-50" src="img/pump.jpeg">
-                    <p class="h6 font-italic">"Your Tire has no air? Come here and we'll help u for free!"  </p>
-                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                    <p class="h5 ">"Your Tire has no air? Come here and we'll help u for free!"  </p>
+                    <button class="bg-primary text-white w-40" style="font-size: 70%" onclick="openInfo(event, 'bookService')">Book</button>
                 </div>
                 <div class="p-1 m-1 bg-info w-25 text-center">
                     <p class="h4">Bike Stealing</p>
                     <img class="w-100 h-50" src="img/steal.jpeg">
-                    <p class="h6 font-italic">"Got no money to buy a bike? We will help you Steal a Bike!"    </p>
-                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                    <p class="h5 ">"Got no money to buy a bike? We will help you Steal a Bike!"    </p>
+                    <button class="bg-primary text-white w-40" style="font-size: 70%" onclick="openInfo(event, 'bookService')">Book</button>
                 </div>
                 <div class="p-1 m-1 bg-info w-25 text-center">
-                    <p class="h5">Bike Stealing with granny</p>
+                    <p class="h4">Granny Service</p>
                     <img class="w-100 h-50" src="img/granny.jpg">
-                    <p class="h6 font-italic">"Lonely granny can do everything, even stealing a bike!"        </p>
-                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                    <p class="h5 ">"Lonely granny can do everything, even stealing a bike!"        </p>
+                    <button class="bg-primary text-white w-40" style="font-size: 70%" onclick="openInfo(event, 'bookService')">Book</button>
                 </div>
             </div>
         </div>
     </div>
+<br>
+
+<div id="employees" class="container">
+    <div class="sa"><img class = "inline-icon" src="img/recruitment.png"><h1> Meet our employees</h1></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/staff1.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body bg-warning">
+                        <h2 class="card-title">Mike</h2>
+                        <p class="card-text">Mike is the owner of the GVK's Bike Repair shop.</p>
+                        <a href="#profile1" class="btn btn-light" data-toggle="collapse">See Profile</a>
+                        <div id="profile1" class="collapse p-3">
+                            <profile>Mike has been repairing bike for 20 years.</profile>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/staff3.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body bg-success">
+                        <h2 class="card-title">Jenny</h2>
+                        <p class="card-text">Electric bike repair specialist.</p>
+                        <a href="#profile2" class="btn btn-light" data-toggle="collapse">See Profile</a>
+                        <div id="profile2" class="collapse p-3">
+                            <profile>Mechanical engineer, can repair electric bicycles</profile>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/staff2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body bg-primary">
+                        <h2 class="card-title">John</h2>
+                        <p class="card-text">Bike repair specialist.</p>
+                        <a href="#profile3" class="btn btn-light" data-toggle="collapse">See Profile</a>
+                        <div id="profile3" class="collapse p-3">
+                            <profile>John has more than 10 years on bike repairing. </profile>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+
 
     <!-- Tab content -->
-    <div id="bookService" class="tabcontent">
-        <h1>Book a Service</h1>
-        <form  class="needs-validation" id = "myForm">
+    <div id="bookService" class="container">
+        <div class="sa"> <img class = "inline-icon" src="img/note.png"> <h1>Book a Service</h1></div>
+        <form  class="needs-validation bg-info" id = "myForm">
 
             <div class="row">
                 <div class="col-25">
@@ -98,7 +152,7 @@
             <div class="row">
                 <div class="col-25">
                     <label for="ex1">telephone</label>
-                    <input class="form-control" id="in3" type="number" maxlength="10" required>
+                    <input class="form-control" id="in3" type="number" required>
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field with numbers.</div>
                 </div>
@@ -116,7 +170,7 @@
             <div class="row">
                 <div class="col-25">
                     <label for="ex1">Date</label>
-                <input id="date1" size="60" type="date" format="MM/DD/YYYY" placeholder="MM/DD/YYYY" onChange="checkDate()"/>
+                    <input class="form-control" id="in4" type="date" required>
                     <div class="valid-feedback">Valid.</div>
                     <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
@@ -157,61 +211,15 @@
         </form>
         
     </div>
-
-    <div id="employees" class="tabcontent">
-        <h1> Meet our employees</h1>
-
-        <div class="container p-3">
-
-            <div class="card-columns">
-                <div class="card bg-warning" style="width:350px">
-                    <img class="card-img-top" src="img/staff1.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h2 class="card-title">Mike</h2>
-                        <info class="card-text">Mike is the owner of the GVK's Bike Repair shop.</info><br>
-                        <a href="#profile1" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                        <div id="profile1" class="collapse p-3">
-                            <profile>Mike has been repairing bike for 20 years.</profile>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-success" style="width:350px">
-                    <img class="card-img-top" src="img/staff3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h2 class="card-title">Jenny</h2>
-                        <info class="card-text">Electric bike repair specialist</info><br>
-                        <!-- collapsible part -->
-                        <a href="#profile2" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                        <div id="profile2" class="collapse p-3">
-                            <profile>Mechanical engineer, can repair electric bicycles</profile>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-danger" style="width:350px">
-                    <img class="card-img-top" src="img/staff2.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h2 class="card-title">John</h2>
-                        <info class="card-text">Bike repair specialist.He is also a <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">stealer</a>!(Click to check more details)</info><br>
-                        <!-- collapsible part -->
-                        <a href="#profile3" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                        <div id="profile3" class="collapse p-3">
-                            <profile>John has more than 10 years on bike repairing. </profile>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
+<br>
 
 
-    <div id="contactUs" class="tabcontent">
+
+    <div id="contactUs" class="container">
+        <div class="sa"> <img class = "inline-icon"src="img/contact.png"> <h1>Contact Address</h1></div>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <div class="container-fluid">
-            <h1 class="text-center">Contact Address</h1>
-            <hr>
             <div class="row">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.502672722112!2d-75.68082384894946!3d45.41936744435238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05a74e93237b%3A0x2e6c2c10b7581602!2sSITE%2C%20800%20King%20Edward%20Ave%2C%20Ottawa%2C%20ON%20K1N%206N5!5e0!3m2!1sen!2sca!4v1675804767749!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
             <div class="row text-center">
