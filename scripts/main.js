@@ -52,7 +52,7 @@ function checkForm(form) {
 }
 
 function updateEmployee(){
-    alert(document.getElementById("selectEmployee").value);
+    //alert(document.getElementById("selectEmployee").value);
     //get selected employee
     var input = document.getElementById("selectEmployee").value;
 
@@ -62,19 +62,19 @@ function updateEmployee(){
     if (input =="John"){
         for (var i = 0; i < JohnAvaliableTime.length; i++) {
             var opt = JohnAvaliableTime[i];
-            select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+            time.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
         }
     }
     else if(input=="Mike"){
         for (var i = 0; i < MikeAvaliableTime.length; i++) {
             var opt = MikeAvaliableTime[i];
-            select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+            time.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
         }
     }
     else{
         for (var i = 0; i < JennyAvaliableTime.length; i++) {
             var opt = JennyAvaliableTime[i];
-            select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+            time.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
         }
     }
 }
