@@ -4,7 +4,8 @@ var MikeAvaliableTime = ["19:00", "19:30", "20:00", "20:30","21:00", "21:30"];
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 
-var wantedEmployee = John;
+var wantedEmployee = "John";
+
 openInfo(event,'services');
 function openInfo(evt, tabName) {
 
@@ -24,6 +25,16 @@ function openInfo(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function checkDate() {
+    picker = document.getElementById('date1');
+    var day = new Date(picker.value).getUTCDay();
+    if ([6, 0].includes(day)) {
+        picker.value = '';
+        alert('This employee is not avaliable during weekends');
+    }
+}
+
 
 function checkIt(){
     var form = document.getElementById("myForm");
@@ -78,3 +89,4 @@ function updateEmployee(){
         }
     }
 }
+
