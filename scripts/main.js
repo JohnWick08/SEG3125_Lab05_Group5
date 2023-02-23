@@ -90,3 +90,12 @@ function updateEmployee(){
     }
 }
 
+
+function checkDate() {
+    picker = document.getElementById('date1');
+    var day = new Date(picker.value).getUTCDay();
+    if ([6, 0].includes(day)) {
+        picker.value = '';
+        alert('This employee is not avaliable during weekends');
+    }
+}
