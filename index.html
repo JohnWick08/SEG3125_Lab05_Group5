@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <! This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp>
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>GVK's Bicycle Repair Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <div class = "ss">
+        <img class = "logo"src="img/logo.png"style="opacity: 0.7">
+
+        <div class="tab">
+            <button class="tablinks" onclick="openInfo(event, 'contactUs')">
+                <p>Contact Us</p>
+                <img class = "icon" src="img/contact.png"></img>
+            </button>
+            <button class="tablinks" onclick="openInfo(event, 'employees')">
+                <p>Employees</p>
+                <img class = "icon" src="img/recruitment.png"></img>
+            </button>
+            <button class="tablinks" onclick="openInfo(event, 'bookService')">
+                <p>Book a Service</p>
+                <img class = "icon" src="img/note.png"></img>
+            </button>
+            <button class="tablinks" onclick="openInfo(event, 'services')">
+                <p>Services</p>
+                <img class = "icon" src="img/customer.png"></img>
+            </button>
+            <button class="tablinks" style="color: cornflowerblue; font-family: sans-serif" onclick="openInfo(event, 'services')">GVK's Bicycle Repair Store</button>
+        </div>
+    </div>
+
+    <!-- Tab content -->
+    <div id="services" class="tabcontent">
+        <h1>Here are the Services</h1>
+        <div class="container">
+            <div class="d-inline-flex p-1 bg-secondary text-black w-100" style = "height: 500px">
+                <div class="p-1 m-1 bg-info w-25 text-center">
+                    <p class="h4">Bike Repairing</p>
+                    <img class="w-100 h-50" src="img/repair.jpg">
+                    <p class="h6 font-italic">"Give us a broken bike, we will return you a good one."         </p>
+                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                </div>
+                <div class="p-1 m-1 bg-info w-25 text-center">
+                    <p class="h4">Bike Tire Pumping</p>
+                    <img class="w-100 h-50" src="img/pump.jpeg">
+                    <p class="h6 font-italic">"Your Tire has no air? Come here and we'll help u for free!"  </p>
+                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                </div>
+                <div class="p-1 m-1 bg-info w-25 text-center">
+                    <p class="h4">Bike Stealing</p>
+                    <img class="w-100 h-50" src="img/steal.jpeg">
+                    <p class="h6 font-italic">"Got no money to buy a bike? We will help you Steal a Bike!"    </p>
+                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                </div>
+                <div class="p-1 m-1 bg-info w-25 text-center">
+                    <p class="h5">Bike Stealing with granny</p>
+                    <img class="w-100 h-50" src="img/granny.jpg">
+                    <p class="h6 font-italic">"Lonely granny can do everything, even stealing a bike!"        </p>
+                    <button class="bg-primary text-white w-50" onclick="openInfo(event, 'bookService')">Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab content -->
+    <div id="bookService" class="tabcontent">
+        <h1>Book a Service</h1>
+        <form  class="needs-validation" id = "myForm">
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="frame">Full Name</label>
+                
+                    <input class="form-control" id="frame" type="text" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="ex1">Email</label>
+                    <input class="form-control" id="in2" type="email" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="ex1">telephone</label>
+                    <input class="form-control" id="in3" type="number" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field with numbers.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="select">Staff:</label>
+                    <select class="form-control" id="selectEmployee" onchange="updateEmployee()">
+                        <option>John</option>
+                        <option>Jenny</option>
+                        <option>Mike</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="ex1">Date</label>
+                    <input class="form-control" id="in4" type="date" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="ex1">Time</label>
+                    <select id = "selectTime" name="time" id="time" required>
+                        <option value="8:00 AM">8:00 AM</option>
+                        <option value="8:30 AM">8:30 AM</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="9:30 AM">9:30 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="10:30 AM">10:30 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="11:30 AM">11:30 AM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="sel1">Service:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Bike Repairing</option>
+                        <option>Bike Tire Pumping</option>
+                        <option>Bike Stealing</option>
+                        <option>Bike Stealing with granny</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "row">
+                <div class="col-25">
+                    <input class="form-control" id="in6" type="submit" onclick ="checkIt()"/>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+    <div id="employees" class="tabcontent">
+        <h1> Meet our employees</h1>
+
+        <div class="container p-3">
+
+            <div class="card-columns">
+                <div class="card bg-warning" style="width:350px">
+                    <img class="card-img-top" src="img/staff1.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h2 class="card-title">Mike</h2>
+                        <info class="card-text">Mike is the owner of the GVK's Bike Repair shop.</info><br>
+                        <a href="#profile1" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                        <div id="profile1" class="collapse p-3">
+                            <profile>Mike has been repairing bike for 20 years.</profile>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-success" style="width:350px">
+                    <img class="card-img-top" src="img/staff3.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h2 class="card-title">Jenny</h2>
+                        <info class="card-text">Electric bike repair specialist</info><br>
+                        <!-- collapsible part -->
+                        <a href="#profile2" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                        <div id="profile2" class="collapse p-3">
+                            <profile>Mechanical engineer, can repair electric bicycles</profile>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-danger" style="width:350px">
+                    <img class="card-img-top" src="img/staff2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h2 class="card-title">John</h2>
+                        <info class="card-text">Bike repair specialist.He is also a <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">stealer</a>!(Click to check more details)</info><br>
+                        <!-- collapsible part -->
+                        <a href="#profile3" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                        <div id="profile3" class="collapse p-3">
+                            <profile>John has more than 10 years on bike repairing. </profile>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="contactUs" class="tabcontent">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+        <div class="container-fluid">
+            <h1 class="text-center">Contact Address</h1>
+            <hr>
+            <div class="row">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.502672722112!2d-75.68082384894946!3d45.41936744435238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05a74e93237b%3A0x2e6c2c10b7581602!2sSITE%2C%20800%20King%20Edward%20Ave%2C%20Ottawa%2C%20ON%20K1N%206N5!5e0!3m2!1sen!2sca!4v1675804767749!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="row text-center">
+                <div class="col-4 box1 pt-4">
+                    <a href="tel:+123456789"><i class="fas fa-phone fa-3x"></i>
+                        <h3 class="d-none d-lg-block d-xl-block">Phone</h3>
+                        <p class="d-none d-lg-block d-xl-block">+123456789</p></a>
+                </div>
+                <div class="col-4 box2 pt-4">
+                    <a href=""><i class="fas fa-home fa-3x"></i>
+                        <h3 class="d-none d-lg-block d-xl-block">Address</h3>
+                        <p class="d-none d-lg-block d-xl-block">800 King Edward Ave, Ottawa, ON K1N 6N5</p></a>
+                </div>
+                <div class="col-4 box3 pt-4">
+                    <a href="mailto:GVK@uottawa.ca"><i class="fas fa-envelope fa-3x"></i>
+                        <h3 class="d-none d-lg-block d-xl-block">E-mail</h3>
+                        <p class="d-none d-lg-block d-xl-block">GVK@uottawa.ca</p></a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!--script src="scripts/groceries.js"></script-->
+    <script src="scripts/main.js"></script>
+
+    <p id="signature">Site create by by Gary Gao, Yingqi Feng, Kaixi Xu</p>
+</body>
+
+</html>
