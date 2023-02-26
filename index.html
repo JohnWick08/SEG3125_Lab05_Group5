@@ -211,6 +211,22 @@
                     </select>
                 </div>
             </div>
+            <script>
+                $(document).ready(function(){
+                    $("#cardName").mouseenter(function(){
+                        $("#textforcardName").addClass("hideInput");
+                    });
+
+                    $("#cardName").mouseleave(function(){
+                        $("#textforcardName").removeClass("hideInput");
+                    });
+
+                    $("#cardName").tooltip({
+                        classes: {
+                            "ui-tooltip": "highlight"
+                        }
+                    });
+                });</script>
             <div class = "row" style="background-color:#eeeba2">
                 <div class="col-25">
                     <label for="in6">Debit/Credit Card:</label>

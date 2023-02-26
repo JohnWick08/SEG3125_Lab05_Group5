@@ -102,19 +102,3 @@ function checkDate() {
         alert('This employee is not avaliable during weekends');
     }
 }
-
-$(document).ready(function(){
-    $("#cardName").mouseenter(function(){
-        $("#textforcardName").addClass("hideInput");
-    });
-
-    $("#cardName").mouseleave(function(){
-        $("#textforcardName").removeClass("hideInput");
-    });
-
-    $("#cardName").tooltip({
-        classes: {
-          "ui-tooltip": "highlight"
-        }
-      });
-});
