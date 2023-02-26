@@ -23,8 +23,10 @@ function openInfo(evt, tabName) {
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+    if (evt.currentTarget.className != 'NaN' && evt.currentTarget.className != null)
+    {
+        evt.currentTarget.className += " active";
+    }
 
 function checkDate() {
     picker = document.getElementById('date1');
@@ -33,6 +35,7 @@ function checkDate() {
         picker.value = '';
         alert('This employee is not avaliable during weekends');
     }
+}
 }
 
 
@@ -99,3 +102,19 @@ function checkDate() {
         alert('This employee is not avaliable during weekends');
     }
 }
+
+$(document).ready(function(){
+    $("#cardName").mouseenter(function(){
+        $("#textforcardName").addClass("hideInput");
+    });
+
+    $("#cardName").mouseleave(function(){
+        $("#textforcardName").removeClass("hideInput");
+    });
+
+    $("#cardName").tooltip({
+        classes: {
+          "ui-tooltip": "highlight"
+        }
+      });
+});
